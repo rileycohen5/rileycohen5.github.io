@@ -1,0 +1,212 @@
+#boombox {
+    display: block;
+    height: 150px;
+    background: #fd6c2d;
+    z-index: 1;
+    transform: translateY(-20px);
+}
+
+#shadow {
+    position: absolute;
+    bottom: -30px;
+    width: 300px;
+    height: 40px;
+    background: #b7b7b7;
+    border-radius: 50%;
+}
+
+#boombox, #shadow {
+    position: relative;
+    margin: 0 auto;
+    top: 50%;
+}
+
+body, html {
+    font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    margin: 0px;
+    height: 100%;
+    width: 100%;
+    background: #f7f5f2;
+    position: relative;
+}
+
+
+@keyframes boom {
+    0% { transform: rotate(0deg) translateY(0px)  }
+    12.5% { transform: rotate(15deg) translateY(0px)  }
+    25% { transform:  rotate(0deg) translateY(0px)  }
+    37.5% { transform: rotate(0deg) translateY(-50px)  }
+    50% { transform: rotate(0deg) translateY(0px)  }
+    62.5% { transform: rotate(-15deg) translateY(0px)  }
+    75% { transform: rotate(0deg) translateY(0px)  }
+    87.5% { transform: rotate(0deg) translateY(-50px)  }
+    100% { transform: rotate(0deg) translateY(0px)  }
+}
+
+
+@keyframes shadow {
+
+    12.5% { transform: scale(1); opacity: .5;  }
+    25% { transform: scale(1); opacity: .5; }
+    37.5% { transform: scale(.5); opacity: .6; }
+    50% { transform: scale(1); opacity: .5; }
+    62.5% { transform: scale(1); opacity: .5;  }
+    75% { transform: scale(1); opacity: .5;  }
+    87.5% { transform: scale(.5); opacity: .6;  }
+    100% { transform: scale(1); opacity: .5;  }
+}
+
+
+@keyframes rot {
+    0% { transform: rotate(0deg) }
+    50% { transform:  rotate(25deg) }
+	100% { transform: rotate(-25deg)  }
+}
+
+
+@keyframes size {
+    0% { transform: scale(1); opacity: .5;}
+    50% { transform: scale(.5);  opacity: .6; }
+	100% { transform: scale(1);   opacity: .5;}
+}
+
+
+  @keyframes backColor {
+    0% {
+      background: black;
+    }
+    25% {
+      background: white;
+    }
+    50% {
+      background: black;
+    }
+    75% {
+      background: white;
+    }
+    100% {
+      background: black;
+    }
+  }
+
+
+
+  #boombox {
+    animation-name: boom;
+    animation-duration: 3s;
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+    }
+
+    #shadow {
+    animation-name: shadow;
+    animation-duration: 3s;
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+    }
+
+    body {
+
+        animation-name: backColor;
+        animation-duration: 3s;
+        animation-delay: 0s;
+        animation-iteration-count: infinite;
+          }
+
+    /*      
+    button {
+        display: block;
+        position: relative;
+        margin: 0 auto;
+        top: 10%;
+        width: 150px;
+        height: 75px;
+        background: #222;;
+        color: white;
+
+    }
+
+    button:hover{
+        cursor:pointer
+    }
+
+    
+    #back {
+      float: left;
+      background: blue;
+      color: white;
+      width: 150px;
+      height: 50px;
+      position: relative;
+      display: block;
+      text-align: center;
+
+  
+    }
+
+    #back:hover{
+      cursor:pointer
+  }
+  
+
+    a {
+      text-decoration: none;
+      display: inline-block;
+      padding: 8px 16px;
+    }
+    
+    a:hover {
+      background-color: #ddd;
+      color: black;
+    }
+    
+    */
+    .previous {
+      background-color: #f1f1f1;
+      color: black;
+    }
+
+ 
+
+
+  #nav {
+    display: flex;
+    justify-content: center;
+    
+  }
+
+  button {
+    top: 10%;
+    width: 150px;
+    height: 75px;
+    background: #222;;
+    color: white;
+
+}
+
+button:hover{
+    cursor:pointer
+}
+
+
+#back {
+  top: 10%;
+  width: 150px;
+  height: 75px;
+  background: #222;;
+  color: white;
+
+
+}
+
+#back:hover{
+  cursor:pointer
+}
+
+#play {
+  border-right: solid white 2px;
+}
+
+#home {
+  border-left: solid white;
+}
